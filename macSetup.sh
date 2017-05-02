@@ -58,3 +58,5 @@ brew cask install android-ndk
 brew cask install virtualbox
 brew cask install virtualbox-extension-pack
 brew cask install microsoft-office
+brew install npm
+npm install jshint
