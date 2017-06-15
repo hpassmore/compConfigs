@@ -38,7 +38,7 @@ brew cask install xquartz
 brew install octave
 
 #Install useful programs
-brew cask install sts
+brew cask install eclipse-ide 
 brew cask install visual-studio-code
 brew cask install iterm2
 brew cask install textual
