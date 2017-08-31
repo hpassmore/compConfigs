@@ -8,6 +8,10 @@ brew install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 cp zshrc ~/.zshrc
 
+#Setup Git
+echo .DS_Store >> ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+
 #Setup for vim
 brew install vim
 cp vimrc ~/.vimrc
