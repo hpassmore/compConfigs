@@ -110,7 +110,7 @@ while true; do
         [Yy]* ) brew tap homebrew/science
                 brew cask install xquartz
                 brew install octave
-                code --instal-extension Gimly81.matlab
+                code --install-extension Gimly81.matlab
                 break;;
         [Nn]* ) break;;
         * ) echo "Please answer yes or no.";;
