@@ -58,21 +58,23 @@ while true; do
 done
 
 
-#Setup haskell
+#Setup Haskell
 while true; do
     echo
     read -p "Do you wish to setup haskell? (y/n) " haskell
     case $haskell in
         [Yy]* ) brew cask install haskell-platform
                 mkdir ~/Haskell
+                cabal install hlint
                 code --install-extension justusadam.language-haskell
+                code --install-extension hoovercj.haskell-linter
                 break;;
         [Nn]* ) break;;
         * ) echo "Please answer yes or no.";;
     esac
 done
 
-#Setup Javascript development
+#Setup Javascript
 while true; do
     echo
     read -p "Do you wish to setup useful Javascript tools (npm, jshint, etc..)? (y/n) " javascript
@@ -108,6 +110,7 @@ while true; do
         [Yy]* ) brew tap homebrew/science
                 brew cask install xquartz
                 brew install octave
+                code --instal-extension Gimly81.matlab
                 break;;
         [Nn]* ) break;;
         * ) echo "Please answer yes or no.";;
@@ -140,3 +143,7 @@ echo "/////////////////////////"
 echo "//// Script complete ////"
 echo "/////////////////////////"
 echo 
+
+echo "Still left to install on own (no way to automate right now that I know of):"
+cat macInstallOnOwn
+echo
