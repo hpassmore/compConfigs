@@ -2,11 +2,17 @@
 #Get homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+#Setup oh-my-zsh. Need to source zshrc which causes script to be ran twice. 
+brew install zsh
+cp zshrc ~/.zshrc
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+source ~/.zshrc
+
 #Setup Git
 cp gitignore ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 
-#Setup for vim
+#Setup Vim
 brew install vim
 cp vimrc ~/.vimrc
 mkdir -p ~/.vim/autoload ~/.vim/bundle
@@ -17,10 +23,9 @@ git clone https://github.com/alvan/vim-closetag.git ~/.vim/bundle/vim-closetag
 #Setup VSCode
 brew cask install visual-studio-code
 
-#Setup java
+#Setup Java
 brew cask install java
 code --install-extension redhat.java
-source ~/.zshrc
 
 #Install useful programs I always use
 brew cask install eclipse-ide 
@@ -36,7 +41,8 @@ brew cask install virtualbox-extension-pack
 
 #Setup Golang
 while true; do
-    read -p "Do you wish to setup golang?" golang
+    echo
+    read -p "Do you wish to setup golang? (y/n) " golang
     case $golang in
         [Yy]* ) mkdir ~/go
                 mkdir ~/go/src
@@ -54,7 +60,8 @@ done
 
 #Setup haskell
 while true; do
-    read -p "Do you wish to setup haskell?" haskell
+    echo
+    read -p "Do you wish to setup haskell? (y/n) " haskell
     case $haskell in
         [Yy]* ) brew cask install haskell-platform
                 mkdir ~/Haskell
@@ -67,7 +74,8 @@ done
 
 #Setup Javascript development
 while true; do
-    read -p "Do you wish to setup useful Javascript tools (npm, jshint, etc..)?" javascript
+    echo
+    read -p "Do you wish to setup useful Javascript tools (npm, jshint, etc..)? (y/n) " javascript
     case $javascript in
         [Yy]* ) code --install-extension dbaeumer.jshint
                 brew install npm
@@ -80,7 +88,8 @@ done
 
 #Setup Android studio and Android libraries
 while true; do
-    read -p "Do you wish to setup Android development tools?" android
+    echo
+    read -p "Do you wish to setup Android development tools? (y/n) " android
     case $android in
         [Yy]* ) brew cask install android-studio
                 brew cask install android-sdk
@@ -93,7 +102,8 @@ done
 
 #Setup Octave/MATLAB
 while true; do
-    read -p "Do you wish to setup Octave/MATLAB?" octave
+    echo
+    read -p "Do you wish to setup Octave/MATLAB? (y/n) " octave
     case $octave in
         [Yy]* ) brew tap homebrew/science
                 brew cask install xquartz
@@ -106,7 +116,8 @@ done
 
 #Only do these on a personal (IE non-work machine)
 while true; do
-    read -p "Do you wish to setup personal use programs (games, office, etc..)?" personal
+    echo
+    read -p "Do you wish to setup personal use programs (games, office, etc..)? (y/n) " personal
     case $personal in
         [Yy]* ) brew cask install teamviewer
                 brew cask install battle-net
@@ -124,7 +135,8 @@ done
 brew cask install lastpass
 open /usr/local/Caskroom/lastpass/latest/LastPass\ Installer.app
 
-#Setup oh-my-zsh
-brew install zsh
-cp zshrc ~/.zshrc
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+echo
+echo "/////////////////////////"
+echo "//// Script complete ////"
+echo "/////////////////////////"
+echo 
