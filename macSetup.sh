@@ -125,7 +125,6 @@ while true; do
         [Yy]* ) brew cask install teamviewer
                 brew cask install battle-net
                 brew cask install proxpn
-                brew cask install amazon-music
                 brew cask install vmware-fusion
                 brew cask install microsoft-office
                 #BNet has extra setup
