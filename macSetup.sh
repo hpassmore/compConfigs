@@ -128,7 +128,7 @@ while true; do
                 brew cask install vmware-fusion
                 brew cask install microsoft-office
                 #BNet has extra setup
-                open /usr/local/Caskroom/battle-net/latest/Battle.net-Setup.app
+                open /usr/local/Caskroom/battle-net/latest/Battle.net.app
                 break;;
         [Nn]* ) break;;
         * ) echo "Please answer yes or no.";;
@@ -137,7 +137,7 @@ done
 
 #Setup lastpass
 brew cask install lastpass
-open /usr/local/Caskroom/lastpass/latest/LastPass\ Installer.app
+open /usr/local/Caskroom/lastpass/latest/LastPass\ Installer/LastPass\ Installer.app
 
 echo
 echo "/////////////////////////"
