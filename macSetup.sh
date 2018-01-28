@@ -30,6 +30,7 @@ code --install-extension redhat.java
 #Install useful programs I always use
 brew cask install eclipse-ide 
 brew cask install iterm2
+brew install tmux
 brew cask install textual
 brew cask install the-unarchiver
 brew cask install google-chrome
