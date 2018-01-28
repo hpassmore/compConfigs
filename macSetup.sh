@@ -128,7 +128,7 @@ while true; do
                 brew cask install vmware-fusion
                 brew cask install microsoft-office
                 #BNet has extra setup
-                open /usr/local/Caskroom/battle-net/latest/Battle.net.app
+                open /usr/local/Caskroom/battle-net/latest/Battle.net-Setup.app
                 break;;
         [Nn]* ) break;;
         * ) echo "Please answer yes or no.";;
