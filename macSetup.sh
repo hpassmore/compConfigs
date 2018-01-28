@@ -137,6 +137,7 @@ done
 
 #Setup lastpass
 brew cask install lastpass
+open /Applications/Google\ Chrome.app
 open /usr/local/Caskroom/lastpass/latest/LastPass\ Installer/LastPass\ Installer.app
 
 echo
