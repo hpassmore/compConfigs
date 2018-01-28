@@ -124,6 +124,7 @@ while true; do
     case $personal in
         [Yy]* ) brew cask install teamviewer
                 brew cask install battle-net
+                brew cask install twitch
                 brew cask install proxpn
                 brew cask install vmware-fusion
                 brew cask install microsoft-office
