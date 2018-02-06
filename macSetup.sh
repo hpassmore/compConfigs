@@ -37,7 +37,6 @@ code --install-extension redhat.java
 brew install python3
 brew postinstall python3
 pip install flake8
-git clone --recursive https://github.com/zchee/deoplete-jedi ~/.vim/bundle/deoplete-jedi
 
 #Install useful programs I always use
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
@@ -63,7 +62,6 @@ while true; do
                 mkdir ~/go/bin
                 mkdir ~/go/pkg
                 git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
-                git clone https://github.com/zchee/deoplete-go.git ~/.vim/bundle/deoplete-go
                 brew install go
                 code --install-extension lukehoban.go
                 brew install gotags
