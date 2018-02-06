@@ -13,13 +13,18 @@ cp gitignore ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 
 #Setup Vim
-brew install vim
+brew install vim --with-python3
 cp vimrc ~/.vimrc
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 git clone https://github.com/jiangmiao/auto-pairs.git ~/.vim/bundle/auto-pairs
 git clone https://github.com/alvan/vim-closetag.git ~/.vim/bundle/vim-closetag
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+git clone https://github.com/vim-airline/vim-airline.git ~/.vim/bundle/vim-airline
+git clone https://github.com/vim-airline/vim-airline-themes.git ~/.vim/bundle/vim-airline-themes
+git clone https://github.com/vim-syntastic/syntastic.git ~/.vim/bundle/syntastic
+git clone https://github.com/majutsushi/tagbar.git ~/.vim/bundle/tagbar
+git clone https://github.com/bling/vim-bufferline ~/.vim/bundle/vim-bufferline
 
 #Setup VSCode
 brew cask install visual-studio-code
@@ -28,7 +33,14 @@ brew cask install visual-studio-code
 brew cask install java
 code --install-extension redhat.java
 
+#Setup Python
+brew install python3
+brew postinstall python3
+pip install flake8
+git clone --recursive https://github.com/zchee/deoplete-jedi ~/.vim/bundle/deoplete-jedi
+
 #Install useful programs I always use
+brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 brew cask install eclipse-ide 
 brew cask install iterm2
 brew install tmux
@@ -51,8 +63,11 @@ while true; do
                 mkdir ~/go/bin
                 mkdir ~/go/pkg
                 git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
+                git clone https://github.com/zchee/deoplete-go.git ~/.vim/bundle/deoplete-go
                 brew install go
                 code --install-extension lukehoban.go
+                brew install gotags
+                go get github.com/nsf/gocode
                 break;;
         [Nn]* ) break;;
         * ) echo "Please answer yes or no.";;
