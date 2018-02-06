@@ -19,6 +19,7 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 git clone https://github.com/jiangmiao/auto-pairs.git ~/.vim/bundle/auto-pairs
 git clone https://github.com/alvan/vim-closetag.git ~/.vim/bundle/vim-closetag
+git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 
 #Setup VSCode
 brew cask install visual-studio-code
