@@ -58,6 +58,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 export EDITOR="vim"
 export GOPATH="$HOME/go"
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
 export PATH="$PATH:$HOME/Library/Haskell/bin"
