@@ -36,7 +36,10 @@ code --install-extension redhat.java
 #Setup Python
 brew install python3
 brew postinstall python3
+brew install python2
+brew postinstall python2
 pip install flake8
+pip3 install flake8
 
 #Install useful programs I always use
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
