@@ -1,4 +1,9 @@
 {
     "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false
+    "telemetry.enableCrashReporter": false,
+    "go.liveErrors": {
+        "enabled": true,
+        "delay": 1000
+    },
+    "editor.formatOnSave": true
 }
