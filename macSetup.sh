@@ -156,8 +156,14 @@ done
 
 #Setup lastpass
 brew cask install lastpass
+
+#open apps that need initial setup
+echo
+echo "Opening apps that have addition setup. Some need to be opened to finish extra downloads, like VS code"
+echo
 open /Applications/Google\ Chrome.app
 open /usr/local/Caskroom/lastpass/latest/LastPass\ Installer/LastPass\ Installer.app
+code &
 
 echo
 echo "/////////////////////////"
