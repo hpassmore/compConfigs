@@ -165,6 +165,8 @@ open /Applications/Google\ Chrome.app
 open /usr/local/Caskroom/lastpass/latest/LastPass\ Installer/LastPass\ Installer.app
 code &
 
+cp vs_code_settings.json ~/Library/Application Support/Code/User/settings.json
+
 echo
 echo "/////////////////////////"
 echo "//// Script complete ////"
