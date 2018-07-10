@@ -69,6 +69,10 @@ while true; do
                 code --install-extension lukehoban.go
                 brew install gotags
                 go get github.com/nsf/gocode
+                go get -v github.com/uudashr/gopkgs/cmd/gopkgs
+                go get -v github.com/sqs/goreturns
+                go get -v github.com/rogpeppe/godef
+                go get -u golang.org/x/lint/golint
                 break;;
         [Nn]* ) break;;
         * ) echo "Please answer yes or no.";;
