@@ -144,12 +144,13 @@ while true; do
     echo
     read -p "Do you wish to setup personal use programs (games, office, etc..)? (y/n) " personal
     case $personal in
-        [Yy]* ) brew cask install teamviewer
-                brew cask install battle-net
-                brew cask install twitch
-                brew cask install proxpn
-                brew cask install vmware-fusion
+        [Yy]* ) brew cask install battle-net
                 brew cask install microsoft-office
+                brew cask install proxpn
+                brew cask install teamviewer
+                brew cask install tunnelblick
+                brew cask install twitch
+                brew cask install vmware-fusion
                 #BNet has extra setup
                 open /usr/local/Caskroom/battle-net/latest/Battle.net-Setup.app
                 break;;
