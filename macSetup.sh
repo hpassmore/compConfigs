@@ -13,7 +13,7 @@ cp gitignore ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 
 #Setup Vim
-brew install vim --with-python3
+brew install vim
 cp vimrc ~/.vimrc
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
@@ -27,10 +27,10 @@ git clone https://github.com/majutsushi/tagbar.git ~/.vim/bundle/tagbar
 git clone https://github.com/bling/vim-bufferline ~/.vim/bundle/vim-bufferline
 
 #Setup VSCode
-brew cask install visual-studio-code
+brew cask install vscodium
 
 #Setup Java
-brew cask install java
+brew cask install adoptopenjdk
 code --install-extension redhat.java
 
 #Setup Python
@@ -66,7 +66,7 @@ while true; do
                 mkdir ~/go/pkg
                 git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
                 brew install go
-                code --install-extension lukehoban.go
+                code --install-extension ms-vscode.go
                 brew install gotags
                 go get github.com/nsf/gocode
                 go get -v github.com/uudashr/gopkgs/cmd/gopkgs
@@ -170,7 +170,7 @@ open /Applications/Google\ Chrome.app
 open /usr/local/Caskroom/lastpass/latest/LastPass\ Installer/LastPass\ Installer.app
 code &
 
-cp vs_code_settings.json ~/Library/Application Support/Code/User/settings.json
+cp vs_code_settings.json ~/Library/Application\ Support/Code/User/settings.json
 
 echo
 echo "/////////////////////////"
