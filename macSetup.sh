@@ -28,6 +28,7 @@ git clone https://github.com/bling/vim-bufferline ~/.vim/bundle/vim-bufferline
 
 #Setup VSCode
 brew cask install vscodium
+code --install-extension tyriar.sort-lines
 
 #Setup Java
 brew cask install adoptopenjdk
@@ -40,6 +41,7 @@ brew install python2
 brew postinstall python2
 pip install flake8
 pip3 install flake8
+code --install-extension ms-python.python
 
 #Install useful programs I always use
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
@@ -168,9 +170,9 @@ echo "Opening apps that have addition setup. Some need to be opened to finish ex
 echo
 open /Applications/Google\ Chrome.app
 open /usr/local/Caskroom/lastpass/latest/LastPass\ Installer/LastPass\ Installer.app
-code &
 
 cp vs_code_settings.json ~/Library/Application\ Support/Code/User/settings.json
+code &
 
 echo
 echo "/////////////////////////"
