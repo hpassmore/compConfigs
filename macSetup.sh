@@ -6,6 +6,7 @@
 brew install zsh
 cp zshrc ~/.zshrc
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+cp holojack.zsh-theme ~/.oh-my-zsh/themes/holojack.zsh-theme
 source ~/.zshrc
 
 #Setup Git
@@ -41,6 +42,9 @@ brew install python2
 brew postinstall python2
 pip install flake8
 pip3 install flake8
+pip install autopep8
+pip3 install autopep8
+brew install pyenv
 code --install-extension ms-python.python
 
 #Install useful programs I always use
@@ -56,6 +60,7 @@ brew install maven
 brew install gradle
 brew cask install virtualbox
 brew cask install virtualbox-extension-pack
+brew cask install docker
 
 #Setup Golang
 while true; do
@@ -68,7 +73,7 @@ while true; do
                 mkdir ~/go/pkg
                 git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
                 brew install go
-                code --install-extension ms-vscode.go
+                code --install-extension golang.go
                 brew install gotags
                 go get github.com/nsf/gocode
                 go get -v github.com/uudashr/gopkgs/cmd/gopkgs
@@ -164,7 +169,8 @@ done
 #Setup lastpass
 brew cask install lastpass
 
-#open apps that need initial setup
+#Post install
+cp tmux.conf ~/.tmux.conf
 echo
 echo "Opening apps that have addition setup. Some need to be opened to finish extra downloads, like VS code"
 echo
@@ -181,5 +187,5 @@ echo "/////////////////////////"
 echo 
 
 echo "Still left to install on own (no way to automate right now that I know of):"
-cat macInstallOnOwn
+cat installManually
 echo
