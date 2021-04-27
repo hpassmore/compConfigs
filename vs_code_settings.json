@@ -5,6 +5,7 @@
         "enabled": true,
         "delay": 1000
     },
+    "editor.acceptSuggestionOnEnter": "off",
     "editor.formatOnSave": true,
     "editor.minimap.enabled": false,
     "python.linting.flake8Enabled": true,
