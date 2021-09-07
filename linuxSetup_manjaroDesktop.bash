@@ -95,6 +95,11 @@ tar -xvf plasma-backup* -C ~/.config
 cp vs_code_settings.json ~/.config/Code\ -\ OSS/User/settings.json
 cp tmux.conf ~/.tmux.conf
 code &
+
+# Most of my manjaro setups dual boot so fix clock
+timedatectl set-local-rtc 1 --adjust-system-clock
+
+
 echo
 echo "/////////////////////////"
 echo "//// Script complete ////"
