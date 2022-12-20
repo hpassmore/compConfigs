@@ -32,12 +32,10 @@ sudo pacman -S code
 code --install-extension tyriar.sort-lines
 
 #Setup python
+sudo pacman -S python-pip
 pip install flake8
-pip3 install flake8
 pip install pylint
-pip3 install pylint
 pip install autopep8
-pip3 install autopep8
 sudo pacman -S pyenv
 code --install-extension ms-python.python
 
@@ -84,7 +82,7 @@ while true; do
                     mpg123 lib32-mpg123 openal lib32-openal v4l-utils lib32-v4l-utils libpulse lib32-libpulse libgpg-error \
                     lib32-libgpg-error alsa-plugins lib32-alsa-plugins alsa-lib lib32-alsa-lib libjpeg-turbo lib32-libjpeg-turbo \
                     sqlite lib32-sqlite libxcomposite lib32-libxcomposite libxinerama lib32-libgcrypt libgcrypt lib32-libxinerama \
-                    ncurses lib32-ncurses ocl-icd lib32-ocl-icd libxslt lib32-libxslt libva lib32-libva gtk3 \
+                    ncurses lib32-ncurses ocl-icd lib32-ocl-icd libxslt lib32-libxslt libva lib32-libva gtk3 lutris\
                     lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs vulkan-icd-loader lib32-vulkan-icd-loader
                 while true; do
                     echo
