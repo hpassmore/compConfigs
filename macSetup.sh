@@ -185,7 +185,3 @@ echo "/////////////////////////"
 echo "//// Script complete ////"
 echo "/////////////////////////"
 echo 
-
-echo "Still left to install on own (no way to automate right now that I know of):"
-cat installManually
-echo

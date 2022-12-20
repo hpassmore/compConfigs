@@ -72,12 +72,11 @@ code &
 # Most of my manjaro setups dual boot so fix clock
 timedatectl set-local-rtc 1 --adjust-system-clock
 
+# SSH Setup
+ssh-keygen -t ed25519
+
 echo
 echo "/////////////////////////"
 echo "//// Script complete ////"
 echo "/////////////////////////"
 echo 
-
-echo "Still left to install on own (no way to automate right now that I know of):"
-cat installManually
-echo
