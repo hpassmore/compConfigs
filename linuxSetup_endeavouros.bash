@@ -1,12 +1,11 @@
 #!/bin/bash
 sudo pacman -Syu
-sudo pacman -S zsh
-sudo pacman -S git
-sudo pacman -S curl
+sudo pacman -S --needed zsh
+sudo pacman -S --needed git
+sudo pacman -S --needed curl
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 cp zshrc ~/.zshrc
 cp holojack.zsh-theme ~/.oh-my-zsh/themes/holojack.zsh-theme
-source ~/.zshrc
 
 #Setup Git
 cp gitignore ~/.gitignore_global
@@ -15,7 +14,7 @@ git config --global user.email "holojack123@gmail.com"
 git config --global user.name "Howard Passmore"
 
 #Setup Vim
-sudo pacman -S vim
+sudo pacman -S --needed vim
 cp vimrc ~/.vimrc
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
@@ -28,44 +27,38 @@ git clone https://github.com/majutsushi/tagbar.git ~/.vim/bundle/tagbar
 git clone https://github.com/bling/vim-bufferline ~/.vim/bundle/vim-bufferline
 
 #setup VS Code OSS
-sudo pacman -S code
+sudo pacman -S --needed code
 code --install-extension tyriar.sort-lines
 
 #Setup python
-sudo pacman -S python-pip
+sudo pacman -S --needed python-pip
 pip install flake8
 pip install pylint
 pip install autopep8
-sudo pacman -S pyenv
+sudo pacman -S --needed pyenv
 code --install-extension ms-python.python
 
 #Install programs I always use
-sudo pacman -S docker
-sudo pacman -S gimp
-sudo pacman -S samba
-sudo pacman -S tmux
-sudo pacman -S virtualbox-host-dkms virtualbox
-sudo pacman -S virtualbox-guest-iso
-yay -S virtualbox-ext-oracle
+sudo pacman -S --needed docker
+sudo pacman -S --needed gimp
+sudo pacman -S --needed samba
+sudo pacman -S --needed tmux
+sudo pacman -S --needed virtualbox-host-dkms virtualbox
+sudo pacman -S --needed virtualbox-guest-iso
+yay -S --needed virtualbox-ext-oracle
 
 #setup java
-sudo pacman -S jdk-openjdk maven gradle
+sudo pacman -S --needed jdk-openjdk maven gradle
 code --install-extension redhat.java
 
 #Setup golang
-sudo pacman -S go
+sudo pacman -S --needed go
 git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
 code --install-extension golang.go
-go get github.com/nsf/gocode
-go get -v github.com/uudashr/gopkgs/cmd/gopkgs
-go get -v github.com/sqs/goreturns
-go get -v github.com/rogpeppe/godef
-go get -u golang.org/x/lint/golint
 
 #Post-install
 cp vs_code_settings.json ~/.config/Code\ -\ OSS/User/settings.json
 cp tmux.conf ~/.tmux.conf
-code &
 
 # Most of my manjaro setups dual boot so fix clock
 timedatectl set-local-rtc 1 --adjust-system-clock
@@ -118,7 +111,7 @@ while true; do
     case $wylnd in
         [Yy]* ) mkdir -p ~/.config/environment.d
                 echo "MOZ_ENABLE_WAYLAND=1" >> ~/.config/environment.d/firefox-wayland.conf
-                sudo pacman -S xorg-xwayland
+                sudo pacman -S --needed xorg-xwayland
                 while true; do
                     echo 
                     read -p "Does computer contain an NVIDIA graphics card? (y/n)" wylndnvda
@@ -144,8 +137,10 @@ done
 echo
 echo "/////////////////////////////////////////////////////////////////////////////////////////////////////"
 echo "////                                  Script complete                                            ////"
-if [$nvda_wayland == 1]; then
+if [ "$nvda_wayland" -eq "1" ]; then
     echo "///// YOU LIKELY NEED TO FOLLOW https://wiki.archlinux.org/title/NVIDIA#DRM_kernel_mode_setting /////"
 fi
 echo "/////////////////////////////////////////////////////////////////////////////////////////////////////"
 echo 
+
+code & 
