@@ -111,6 +111,7 @@ while true; do
 done
 
 # Wayland setup
+nvda_wayland=0
 while true; do
     echo
     read -p "Do you wish to setup Wayland? (y/n)" wylnd
@@ -122,26 +123,29 @@ while true; do
                     echo 
                     read -p "Does computer contain an NVIDIA graphics card? (y/n)" wylndnvda
                     case $wylndnvda in
-                        [Yy]* ) sudo systemctl enable nvidia-resume.service
+                        [Yy]* ) nvda_wayland=1
+                                sudo systemctl enable nvidia-resume.service
                                 sudo systemctl enable nvidia-hibernate.service
                                 sudo systemctl enable nvidia-suspend.service
                                 echo "options nvidia NVreg_PreserveVideoMemoryAllocations=1 NVreg_TemporaryFilePath=/tmp" | sudo tee -a /etc/modprobe.d/nvidia-power-management.conf > /dev/null
-                                echo
-                                echo "You likely need to add nvidia_drm.modeset=1 to kernel parameters. This needs to be done manually until you figure out how to do it right"
                                 break;;
                         [Nn]* ) break;;
                         * ) echo "Please answer yes or no.";;
                     esac
                 done
                 break;;
-        [Nn]* ) break;;
+        [Nn]* ) nvda_wayland=0
+                break;;
         * ) echo "Please answer yes or no.";;
     esac
 done
 
 
 echo
-echo "/////////////////////////"
-echo "//// Script complete ////"
-echo "/////////////////////////"
+echo "/////////////////////////////////////////////////////////////////////////////////////////////////////"
+echo "////                                  Script complete                                            ////"
+if [$nvda_wayland == 1]; then
+    echo "///// YOU LIKELY NEED TO FOLLOW https://wiki.archlinux.org/title/NVIDIA#DRM_kernel_mode_setting /////"
+fi
+echo "/////////////////////////////////////////////////////////////////////////////////////////////////////"
 echo 
