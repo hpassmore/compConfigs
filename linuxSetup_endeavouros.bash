@@ -110,6 +110,35 @@ while true; do
     esac
 done
 
+# Wayland setup
+while true; do
+    echo
+    read -p "Do you wish to setup Wayland? (y/n)" wylnd
+    case $wylnd in
+        [Yy]* ) mkdir -p ~/.config/environment.d
+                echo "MOZ_ENABLE_WAYLAND=1" >> ~/.config/environment.d/firefox-wayland.conf
+                sudo pacman -S xorg-xwayland
+                while true; do
+                    echo 
+                    read -p "Does computer contain an NVIDIA graphics card? (y/n)" wylndnvda
+                    case $wylndnvda in
+                        [Yy]* ) sudo systemctl enable nvidia-resume.service
+                                sudo systemctl enable nvidia-hibernate.service
+                                sudo systemctl enable nvidia-suspend.service
+                                echo "options nvidia NVreg_PreserveVideoMemoryAllocations=1 NVreg_TemporaryFilePath=/tmp" | sudo tee -a /etc/modprobe.d/nvidia-power-management.conf > /dev/null
+                                echo
+                                echo "You likely need to add nvidia_drm.modeset=1 to kernel parameters. This needs to be done manually until you figure out how to do it right"
+                                break;;
+                        [Nn]* ) break;;
+                        * ) echo "Please answer yes or no.";;
+                    esac
+                done
+                break;;
+        [Nn]* ) break;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
+
 
 echo
 echo "/////////////////////////"
