@@ -120,7 +120,6 @@ while true; do
                                 sudo systemctl enable nvidia-resume.service
                                 sudo systemctl enable nvidia-hibernate.service
                                 sudo systemctl enable nvidia-suspend.service
-                                sudo ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
                                 echo "options nvidia NVreg_PreserveVideoMemoryAllocations=1 NVreg_TemporaryFilePath=/tmp" | sudo tee -a /etc/modprobe.d/nvidia-power-management.conf > /dev/null
                                 break;;
                         [Nn]* ) break;;
