@@ -45,6 +45,8 @@ sudo pacman -S --needed samba
 sudo pacman -S --needed tmux
 sudo pacman -S --needed virtualbox-host-dkms virtualbox
 sudo pacman -S --needed virtualbox-guest-iso
+sudo pacman -S --needed reflector
+sudo systemctl enable --now reflector.timer
 yay -S --needed virtualbox-ext-oracle
 
 #setup java
