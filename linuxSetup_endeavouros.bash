@@ -128,6 +128,16 @@ while true; do
                         * ) echo "Please answer yes or no.";;
                     esac
                 done
+                while true; do
+                    echo 
+                    read -p "Does computer use KDE Plasma? (y/n)" wylndnvda
+                    case $wylndnvda in
+                        [Yy]* ) sudo pacman -S plasma-wayland-session
+                                break;;
+                        [Nn]* ) break;;
+                        * ) echo "Please answer yes or no.";;
+                    esac
+                done
                 break;;
         [Nn]* ) nvda_wayland=0
                 break;;
