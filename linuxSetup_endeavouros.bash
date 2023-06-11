@@ -63,7 +63,7 @@ cp vs_code_settings.json ~/.config/Code\ -\ OSS/User/settings.json
 cp tmux.conf ~/.tmux.conf
 
 # Most of my manjaro setups dual boot so fix clock in windows. Mandate utc usage here
-timedatectl set-local-rtc 0 --adjust-system-clock
+timedatectl set-local-rtc 1 --adjust-system-clock
 
 # SSH Setup
 ssh-keygen -t ed25519
