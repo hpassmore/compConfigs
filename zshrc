@@ -89,3 +89,4 @@ export PATH="$PATH:$HOME/Library/Haskell/bin"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias discord="/usr/bin/discord --enable-features=UseOzonePlatform --ozone-platform=wayland &> /dev/null &"
