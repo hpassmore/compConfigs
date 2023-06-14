@@ -46,6 +46,7 @@ sudo pacman -S --needed tmux
 sudo pacman -S --needed virtualbox-host-dkms virtualbox
 sudo pacman -S --needed virtualbox-guest-iso
 sudo pacman -S --needed reflector
+sudo pacman -S --needed libreoffice-fresh
 sudo systemctl enable --now reflector.timer
 yay -S --needed virtualbox-ext-oracle
 
