@@ -89,5 +89,5 @@ export PATH="$PATH:$HOME/Library/Haskell/bin"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias discord="nohup /usr/bin/discord --enable-features=UseOzonePlatform --ozone-platform=wayland &"
-alias codium="nohup code --enable-features=UseOzonePlatform --ozone-platform=wayland &"
+alias discord="/usr/bin/discord --enable-features=UseOzonePlatform --ozone-platform=wayland &> /dev/null &"
+alias codium="code --enable-features=UseOzonePlatform --ozone-platform=wayland &> /dev/null &"
