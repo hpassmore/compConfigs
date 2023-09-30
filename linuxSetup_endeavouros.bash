@@ -61,7 +61,7 @@ git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
 codium --install-extension golang.go
 
 #Post-install
-cp vs_code_settings.json ~/.config/Code\ -\ OSS/User/settings.json
+cp vs_code_settings.json ~/.config/VSCodium/User/settings.json
 cp tmux.conf ~/.tmux.conf
 
 # Most of my manjaro setups dual boot so fix clock in windows. Mandate utc usage here
