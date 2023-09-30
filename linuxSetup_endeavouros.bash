@@ -29,6 +29,7 @@ git clone https://github.com/bling/vim-bufferline ~/.vim/bundle/vim-bufferline
 #setup VS Code OSS
 sudo pacman -S --needed code
 code --install-extension tyriar.sort-lines
+code --install-extension jeanp413.open-remote-ssh
 
 #Setup python
 sudo pacman -S --needed python-pip
