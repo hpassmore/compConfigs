@@ -10,7 +10,7 @@ cp holojack.zsh-theme ~/.oh-my-zsh/themes/holojack.zsh-theme
 #Setup Git
 cp gitignore ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
-git config --global user.email "holojack123@gmail.com"
+git config --global user.email "howard.passmore17@gmail.com"
 git config --global user.name "Howard Passmore"
 
 #Setup Vim
@@ -26,10 +26,10 @@ git clone https://github.com/vim-syntastic/syntastic.git ~/.vim/bundle/syntastic
 git clone https://github.com/majutsushi/tagbar.git ~/.vim/bundle/tagbar
 git clone https://github.com/bling/vim-bufferline ~/.vim/bundle/vim-bufferline
 
-#setup VS Code OSS
-sudo pacman -S --needed code
-code --install-extension tyriar.sort-lines
-code --install-extension jeanp413.open-remote-ssh
+#setup VSCodium
+yay -S --needed vscodium
+codium --install-extension tyriar.sort-lines
+codium --install-extension jeanp413.open-remote-ssh
 
 #Setup python
 sudo pacman -S --needed python-pip
@@ -37,7 +37,7 @@ pip install flake8
 pip install pylint
 pip install autopep8
 sudo pacman -S --needed pyenv
-code --install-extension ms-python.python
+codium --install-extension ms-python.python
 
 #Install programs I always use
 sudo pacman -S --needed docker
@@ -53,12 +53,12 @@ yay -S --needed virtualbox-ext-oracle
 
 #setup java
 sudo pacman -S --needed jdk-openjdk maven gradle
-code --install-extension redhat.java
+codium --install-extension redhat.java
 
 #Setup golang
 sudo pacman -S --needed go
 git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
-code --install-extension golang.go
+codium --install-extension golang.go
 
 #Post-install
 cp vs_code_settings.json ~/.config/Code\ -\ OSS/User/settings.json
@@ -157,4 +157,4 @@ fi
 echo "/////////////////////////////////////////////////////////////////////////////////////////////////////"
 echo 
 
-code & 
+codium & 
