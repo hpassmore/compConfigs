@@ -1,5 +1,8 @@
-PROMPT="%D{%m/%f/%y} %T %(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
-PROMPT+=' %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info)'
+PROMPT="%D{%m/%f/%y} %T %(?:%{$fg_bold[green]%}➜  :%{$fg_bold[red]%}➜  )"
+if [[ "$user" != "$DEFAULT_USER" || -n "$SSH_CONNECTION" ]]; then
+    PROMPT+="$USER@%m:"
+fi
+PROMPT+='%{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info)'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
