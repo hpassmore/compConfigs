@@ -27,7 +27,7 @@ git clone https://github.com/majutsushi/tagbar.git ~/.vim/bundle/tagbar
 git clone https://github.com/bling/vim-bufferline ~/.vim/bundle/vim-bufferline
 
 #setup VSCodium
-yay -S --needed vscodium
+yay -S --needed vscodium-bin
 codium --install-extension tyriar.sort-lines
 codium --install-extension jeanp413.open-remote-ssh
 
