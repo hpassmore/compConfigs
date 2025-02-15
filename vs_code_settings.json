@@ -1,22 +1,7 @@
 {
-    "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,
-    "telemetry.telemetryLevel": "off",
-    "go.liveErrors": {
-        "enabled": true,
-        "delay": 1000
-    },
     "editor.acceptSuggestionOnEnter": "off",
     "editor.formatOnSave": true,
     "editor.minimap.enabled": false,
-    "python.linting.flake8Enabled": true,
-    "python.linting.flake8Args": [
-        "--max-line-length=120"
-    ],
-    "python.formatting.provider": "autopep8",
-    "python.formatting.autopep8Args": [
-        "--max-line-length=120"
-    ],
     "telemetry.telemetryLevel": "off",
     "window.titleBarStyle": "custom"
 }
