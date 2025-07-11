@@ -38,6 +38,7 @@ pip install pylint
 pip install autopep8
 sudo pacman -S --needed pyenv
 codium --install-extension ms-python.python
+codium --install-extension ms-python.flake8
 
 #Install programs I always use
 sudo pacman -S --needed docker
