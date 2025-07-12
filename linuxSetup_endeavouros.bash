@@ -33,9 +33,9 @@ codium --install-extension jeanp413.open-remote-ssh
 
 #Setup python
 sudo pacman -S --needed python-pip
-pip install flake8
-pip install pylint
-pip install autopep8
+yay -S python-flake8
+yay -S python-pylint
+yay -S python-autopep8
 sudo pacman -S --needed pyenv
 codium --install-extension ms-python.python
 codium --install-extension ms-python.flake8
